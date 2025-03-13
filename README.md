@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-  English | <a href="./README.zh.md">中文</a>
+  中文 | <a href="./README.en.md">英文</a>
 </div>
 
 ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers-orange?style=flat-square&logo=cloudflare)
