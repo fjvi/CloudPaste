@@ -1047,12 +1047,10 @@ a.qr-btn {
   max-width: 100%;
   overflow-x: auto;
   margin-bottom: 1rem;
-  border: 1px solid var(--border-color);
   border-radius: 4px;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-all;
-  white-space: pre-wrap; /* 保留换行符并自动换行 */
 }
 
 /* 段落样式 */
@@ -2467,6 +2465,8 @@ a.qr-btn {
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .content-controls .left-controls {
@@ -2520,7 +2520,7 @@ a.qr-btn {
 /* 确保基础容器在所有尺寸下都能正常工作 */
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 960px;
   margin: 0 auto;
   padding: clamp(1rem, 3vw, 2rem);  /* 使用 clamp 实现响应式内边距 */
   min-height: 100vh;                 /* 确保容器至少占满视口高度 */
@@ -2533,14 +2533,14 @@ a.qr-btn {
 /* 超大屏幕 (≥ 1400px) */
 @media (min-width: 1400px) {
   .card {
-    min-width: 1200px;
+    min-width: 960px;
   }
 }
 
 /* 大屏幕 (1200-1399px) */
 @media (max-width: 1399px) and (min-width: 1200px) {
   .card {
-    min-width: 1000px;
+    min-width: 960px;
   }
 }
 
@@ -2914,9 +2914,9 @@ createApp({
   setup() {
     const activeTab = ref('paste');
     const content = ref('');
-    const isMarkdown = ref(true);
+    const isMarkdown = ref(false);
     const password = ref('');
-    const expiresIn = ref('1d');
+    const expiresIn = ref('never');
     const files = ref([]);
     const isDragging = ref(false);
     const result = ref(null);
