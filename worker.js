@@ -4644,10 +4644,6 @@ createApp({
         
         <!-- 设置选项 -->
         <div class="settings">
-        <div class="markdown-toggle">
-            <input type="checkbox" id="markdown-toggle" v-model="isMarkdown">
-            <label for="markdown-toggle">启用 Markdown</label>
-        </div>
 
         <!-- 备注输入框 -->
         <div class="input-group">
@@ -4697,7 +4693,7 @@ createApp({
         </div>
 
         <div class="input-group">
-          <label>可打开次数 (0表示无限制)</label>
+          <label>可打开次数 </label>
           <input 
             type="number" 
             v-model="maxViews"
@@ -4706,9 +4702,14 @@ createApp({
             title="设置分享可以被打开的次数，0或留空表示无限制"
           >
         </div>
+        <div class="markdown-toggle">
+            <input type="checkbox" id="markdown-toggle" v-model="isMarkdown">
+            <label for="markdown-toggle">启用 Markdown</label>
+        </div>
+		
+        <div><button class="btn" @click="submitPaste">创建分享</button></div>
         </div>
 
-        <button class="btn" @click="submitPaste">创建分享</button>
       </div>
 
       <!-- 文件上传部分 -->
@@ -6994,18 +6995,6 @@ const shareHtml = `<!DOCTYPE html>
                     </div>
 
                     <!-- 底部控制区域 -->
-                    <div class="settings" style="margin-top: 1rem;">
-                      <!-- Markdown 开关 -->
-                      <div class="input-group">
-                        <div class="markdown-toggle" style="margin-bottom: 0;">
-                          <input 
-                            type="checkbox" 
-                            id="edit-markdown-toggle" 
-                            v-model="editMarkdown"
-                          >
-                          <label for="edit-markdown-toggle">启用 Markdown</label>
-                        </div>
-                      </div>
 
                       <!-- 添加备注输入框 -->
                       <div class="input-group">
@@ -7043,6 +7032,19 @@ const shareHtml = `<!DOCTYPE html>
                       </div>
                     </div>
 
+                    <div class="settings" style="margin-top: 1rem;">
+                      <!-- Markdown 开关 -->
+                      <div class="input-group">
+                        <div class="markdown-toggle" style="margin-bottom: 0;">
+                          <input 
+                            type="checkbox" 
+                            id="edit-markdown-toggle" 
+                            v-model="editMarkdown"
+                          >
+                          <label for="edit-markdown-toggle">启用 Markdown</label>
+                        </div>
+                      </div>
+					  
                     <!-- 编辑操作按钮 -->
                     <div class="actions" style="margin-top: 1rem;">
                       <button 
