@@ -2522,7 +2522,7 @@ a.qr-btn {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: clamp(1rem, 3vw, 2rem);  /* 使用 clamp 实现响应式内边距 */
+  padding: clamp(0rem, 1vw, 2rem);  /* 使用 clamp 实现响应式内边距 */
   min-height: 100vh;                 /* 确保容器至少占满视口高度 */
   display: flex;
   flex-direction: column;
@@ -6947,7 +6947,7 @@ const shareHtml = `<!DOCTYPE html>
                 <div class="content-controls">
                   <div class="left-controls">
                     <button class="btn" @click="copyContent" v-if="!isEditing">
-                      <span v-if="!copied">复制内容</span>
+                      <span v-if="!copied">复制</span>
                       <span v-else>已复制!</span>
                     </button>
                     <button 
@@ -6956,7 +6956,7 @@ const shareHtml = `<!DOCTYPE html>
                       @click="startEdit" 
                       :disabled="isEditing"
                     >
-                      编辑内容
+                      编辑
                     </button>
                   </div>
                   
@@ -6995,6 +6995,7 @@ const shareHtml = `<!DOCTYPE html>
                     </div>
 
                     <!-- 底部控制区域 -->
+                    <div class="settings" style="margin-top: 1rem;">
 
                       <!-- 添加备注输入框 -->
                       <div class="input-group">
@@ -7030,9 +7031,6 @@ const shareHtml = `<!DOCTYPE html>
                           class="form-input"
                         >
                       </div>
-                    </div>
-
-                    <div class="settings" style="margin-top: 1rem;">
                       <!-- Markdown 开关 -->
                       <div class="input-group">
                         <div class="markdown-toggle" style="margin-bottom: 0;">
@@ -7044,6 +7042,7 @@ const shareHtml = `<!DOCTYPE html>
                           <label for="edit-markdown-toggle">启用 Markdown</label>
                         </div>
                       </div>
+                    </div>
 					  
                     <!-- 编辑操作按钮 -->
                     <div class="actions" style="margin-top: 1rem;">
