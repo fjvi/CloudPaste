@@ -180,8 +180,8 @@ body {
 
 .card {
   background: var(--card-bg);
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 2rem;
   margin-bottom: 1rem;
   width: fit-content;
@@ -1151,17 +1151,16 @@ a.qr-btn {
 .content h4,
 .content h5,
 .content h6 {
-  margin: 0.8em 0 0.2em; /* 减小标题下方间距 */
+  margin: 0.4em 0 0.2em; /* 减小标题下方间距 */
   font-weight: 600;
   line-height: 1.2; /* 减小标题行高 */
   color: #1a202c;
 }
 
 .content h1 {
-  font-size: 2em;
+  font-size: 1.8em;
   border-bottom: 2px solid #eaecef;
   padding-bottom: 0.5em;
-  margin-top: 1em;
 }
 
 .content h2 {
@@ -2441,15 +2440,15 @@ a.qr-btn {
 /* 添加主题切换按钮样式 */
 .theme-toggle {
   position: fixed;
-  top: 10px;
-  left: 10px;  /* 改为左侧 */
+  top: 0;
+  left: 0;  /* 改为左侧 */
   z-index: 1000;
   background: none;
   border: none;
   cursor: pointer;
   color: var(--text-color);
-  font-size: 24px;
-  padding: 8px;
+  font-size: 20px;
+  padding:8px;
   border-radius: 50%;
   transition: background-color 0.3s;
 }
@@ -2464,9 +2463,9 @@ a.qr-btn {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1rem;
+  margin: 10px;
   padding-bottom: 10px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 3px solid var(--border-color);
 }
 
 .content-controls .left-controls {
@@ -2566,14 +2565,14 @@ a.qr-btn {
 @media (max-width: 768px) {
   /* 容器和卡片样式 */
   .container {
-    padding: 1rem;
+    padding: 40px 0;
   }
 
   .card {
     width: 100%;
     max-width: 100%;
     min-width: auto;
-    padding: 1rem;
+    padding: 0;
   }
 
   /* 编辑器相关 */
@@ -2688,14 +2687,14 @@ a.qr-btn {
 @media (max-width: 767px) and (min-width: 481px) {
   .card {
     min-width: auto;
-    width: 95%;
-    padding: 1.5rem;
+    width: 100%;
+    padding: 0;
   }
 
   .editor-container {
     flex-direction: column;
     height: 400px;
-    min-height: 300px;  // 可以调整这个值
+    min-height: 400px;  // 可以调整这个值
   }
 
   .editor, .preview {
@@ -2706,7 +2705,7 @@ a.qr-btn {
 
   
   .admin-content {
-    width: 55%;
+    width: 60%;
     right: 0;
     padding: 1rem;
   }
@@ -2774,18 +2773,18 @@ a.qr-btn {
   /* 卡片样式 */
   .card {
     min-width: auto;
-    width: 95%;
-    padding: 0.8rem;
+    width: 100%;
+    padding: 0;
   }
 
   /* 编辑器相关 */
   .editor-container {
     height: 300px;
-    min-height: 300px;
+    min-height: 400px;
   }
 
   .editor, .preview {
-    height: 300px;
+    height: 400px;
     min-width: auto;
   }
 
