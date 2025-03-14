@@ -80,7 +80,7 @@ const styles = `
 
 :root {
   --primary-color: #3498db;
-  --bg-color: #f5f6fa;
+  --bg-color: #d9d9d9;
   --border-color: #dcdde1;
   --text-color: #2d3436;
   --card-bg: white;
