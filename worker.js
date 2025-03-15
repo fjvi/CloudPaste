@@ -1074,10 +1074,10 @@ a.qr-btn {
 
 /* 图片样式 */
 .content img {
-  max-width: 100%;
+  max-width: 600px;
   height: auto;
   margin: 1.5em auto;
-  display: block;
+  margin-left:0
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1154,7 +1154,7 @@ a.qr-btn {
   margin: 0.4em 0 0.2em; /* 减小标题下方间距 */
   font-weight: 600;
   line-height: 1.2; /* 减小标题行高 */
-  color: #1a202c;
+  color: var(--markdown-text);
 }
 
 .content h1 {
@@ -1196,7 +1196,7 @@ a.qr-btn {
 
 .content li strong {
   font-weight: 600;
-  color: #2c3e50;
+  color: #3498db;
   margin-right: 0.25em; /* 加粗文本右侧添加小间距 */
 }
 
